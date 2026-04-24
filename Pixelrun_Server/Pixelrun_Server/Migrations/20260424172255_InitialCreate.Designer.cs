@@ -12,8 +12,8 @@ using Pixelrun_Server;
 namespace Pixelrun_Server.Migrations
 {
     [DbContext(typeof(GameDbContext))]
-    [Migration("20260422170849_INIT")]
-    partial class INIT
+    [Migration("20260424172255_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

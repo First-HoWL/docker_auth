@@ -3,18 +3,23 @@ services:
     image: postgres:16
     restart: always
     environment:
-      POSTGRES_USER: user
+      POSTGRES_USER: userdb
       POSTGRES_PASSWORD: qwerty12345
       POSTGRES_DB: userdb
     ports:
       - "5432:5432"
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - ./db-data:/var/lib/postgresql/data
+    
   server:
     build: ./Pixelrun_Server
     ports:
       - 8080:8080
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-volumes:
-  db-data: {}
+    depends_on:
+      - db
+  frontend:
+    build: ./Pixelrun_Frontend
+    ports:
+      - 3000:80

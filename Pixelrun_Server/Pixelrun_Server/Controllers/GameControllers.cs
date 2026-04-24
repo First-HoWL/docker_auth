@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 using Pixelrun_Server.Models;
 using Pixelrun_Server.Services;
+using System.Security.Claims;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Pixelrun_Server.Controllers
 {
@@ -28,6 +29,8 @@ namespace Pixelrun_Server.Controllers
         [HttpPost("register")]
         public ActionResult Register([FromBody] PlayerRegisterDTO dto)
         {
+            var playr = _players.GetAll().FirstOrDefault(p => p.Email == dto.Email);
+            if (playr != null) return BadRequest(new { error = "Email уже зарегистрирован" });
             var player = _players.Register(dto);
             var token = _tokens.GenerateToken(player);
             return Ok(new { token, player.Id, player.Username });
