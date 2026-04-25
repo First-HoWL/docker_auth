@@ -40,4 +40,5 @@ docker compose up --build
 
 * API: http://localhost:8080
 * Swagger UI: http://localhost:8080/swagger
+* Frontend: http://localhost:3000
 
