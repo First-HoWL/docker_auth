@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, createContext, useContext, useCallback } from "react";
 
-const API          = "http://localhost:8080";
-const WS_URL       = "ws://localhost:8080/ws/game";
+const API          = "http://54.211.154.141:8080";
+const WS_URL       = "http://54.211.154.141:8080/ws/game";
 const GH_REPO      = "MishaPetrovskui/SFML_MainPlatformer";
 const GH_BRANCH    = "pixelrun%2Bserver";
 const GH_API       = `https://api.github.com/repos/${GH_REPO}/commits?sha=${GH_BRANCH}&per_page=20`;
