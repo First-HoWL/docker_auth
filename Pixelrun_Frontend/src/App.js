@@ -269,7 +269,7 @@ function Hero({ setPage }) {
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--accent)", animation: "pulse 1.5s infinite" }} /> v1.3 · Live
         </span>
         <h1 style={{ fontSize: "clamp(3.5rem,9vw,8rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 0.95, marginBottom: "1.5rem", animation: "fadeUp .6s .1s ease both", opacity: 0, animationFillMode: "forwards" }}>
-          PIXEL<span style={{ color: "var(--accent)" }}>RUN</span>
+          PIXEl<span style={{ color: "var(--accent)" }}>RUN</span>
         </h1>
         <p style={{ fontSize: 18, color: "var(--muted)", maxWidth: 520, margin: "0 auto 2.5rem", animation: "fadeUp .6s .2s ease both", opacity: 0, animationFillMode: "forwards" }}>
           A pixel-art 2D platformer with precise combat, global leaderboards, quest system, cosmetics — and real-time multiplayer.
